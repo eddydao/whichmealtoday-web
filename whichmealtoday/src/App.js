@@ -1,23 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import meal from "./img/meal.jpeg";
+
+const Ingredient = () => {
+  return(
+    <>
+      <ul class="ingredient">
+        <li>Ingre 1</li>
+        <li>Ingre 2</li>
+        <li>Ingre 3</li>
+        <li>Ingre 4</li>
+        <li>Ingre 5</li>
+      </ul>
+    </>
+  )
+
+}
+
+const Dish = () =>{
+  return(
+    <div class="disk">
+      <img class="meal-img" src={meal} alt=''></img>
+      <span>Disk name</span>
+      <Ingredient></Ingredient>
+    </div>
+  )
+}
+
+
+const MainContent = () => {
+  return(
+    <div>
+      <h1>Which meal today</h1>
+      <br></br>
+      <h3>Morning menu</h3>
+      <Dish></Dish>
+      <h3>Lunch menu</h3>
+      <Dish></Dish>
+      <h3>Dinner menu</h3>
+      <Dish></Dish>
+    </div>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainContent></MainContent>
     </div>
   );
 }
